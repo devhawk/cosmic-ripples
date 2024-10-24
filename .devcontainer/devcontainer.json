@@ -32,13 +32,9 @@
 	},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
-	// "postCreateCommand": [
-	// 	"python -m venv .venv",
-	// 	"&&",
-	// 	".venv/bin/pip install --upgrade pip",
-	// 	"&&",
-	// 	".venv/bin/pip install dbos"
-	// ],
+	"onCreateCommand": [
+		"python -m venv .venv && .venv/bin/pip install --upgrade pip"
+	],
 	"remoteEnv": {
 		"PGPASSWORD": "postgres"
 	}
